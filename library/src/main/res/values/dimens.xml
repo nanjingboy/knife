@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="clear_edit_text_clear_icon_width">16dp</dimen>
+    <dimen name="clear_edit_text_clear_icon_height">16dp</dimen>
+</resources>
