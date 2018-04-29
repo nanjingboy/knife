@@ -9,4 +9,10 @@
         android:layout_height="40dp"
         android:textAllCaps="false"
         android:text="ClearEditText Demo"/>
+    <Button
+        android:id="@+id/searchEditTextDemo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="SearchEditText Demo"/>
 </LinearLayout>

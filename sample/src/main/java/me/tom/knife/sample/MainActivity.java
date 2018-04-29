@@ -18,5 +18,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ClearEditTextDemoActivity.class));
             }
         });
+
+        findViewById(R.id.searchEditTextDemo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SearchEditTextDemoActivity.class));
+            }
+        });
     }
 }

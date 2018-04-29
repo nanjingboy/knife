@@ -15,5 +15,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ClearEditTextDemoActivity" />
+        <activity android:name=".SearchEditTextDemoActivity"/>
     </application>
 </manifest>

@@ -84,7 +84,7 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
         mClearIconHeight = height;
     }
 
-    private void init(AttributeSet attrs, int defStyle) {
+    protected void init(AttributeSet attrs, int defStyle) {
         if (attrs == null) {
             mClearIconWidth = getResources().getDimensionPixelSize(R.dimen.clear_edit_text_clear_icon_width);
             mClearIconHeight = getResources().getDimensionPixelSize(R.dimen.clear_edit_text_clear_icon_height);
@@ -106,6 +106,8 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
             typedArray.recycle();
         }
         setFocusable(true);
+        setCompoundDrawablePadding(getResources().getDimensionPixelSize(R.dimen.edit_text_compound_drawable_padding));
+
     }
 
     private void showClearIcon(boolean isShowIcon) {
