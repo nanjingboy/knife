@@ -15,7 +15,7 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
 
     private int mClearIconWidth;
     private int mClearIconHeight;
-    private Drawable mClearDrawable;
+    private Drawable mClearIcon;
 
     public ClearEditText(Context context) {
         super(context);
@@ -60,16 +60,20 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
     public boolean onTouchEvent(MotionEvent event) {
         if (getCompoundDrawables()[2] != null) {
             if (event.getAction() == MotionEvent.ACTION_UP) {
-                boolean xTouchable = event.getX() > (getWidth() - getPaddingRight() - mClearDrawable.getIntrinsicWidth())
+                boolean xTouchable = event.getX() > (getWidth() - getPaddingRight() - mClearIcon.getIntrinsicWidth())
                         && (event.getX() < (getWidth() - getPaddingRight()));
-                boolean yTouchable = event.getY() > (getHeight() - mClearDrawable.getIntrinsicHeight()) / 2
-                        && event.getY() < (getHeight() + mClearDrawable.getIntrinsicHeight()) / 2;
+                boolean yTouchable = event.getY() > (getHeight() - mClearIcon.getIntrinsicHeight()) / 2
+                        && event.getY() < (getHeight() + mClearIcon.getIntrinsicHeight()) / 2;
                 if (xTouchable && yTouchable) {
                     setText("");
                 }
             }
         }
         return super.onTouchEvent(event);
+    }
+
+    public void setClearIcon(Drawable drawable) {
+        mClearIcon = drawable;
     }
 
     public void setClearIconWidth(int width) {
@@ -81,10 +85,10 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        mClearDrawable = ContextCompat.getDrawable(getContext(), R.mipmap.clear);
         if (attrs == null) {
             mClearIconWidth = getResources().getDimensionPixelSize(R.dimen.clear_edit_text_clear_icon_width);
             mClearIconHeight = getResources().getDimensionPixelSize(R.dimen.clear_edit_text_clear_icon_height);
+            mClearIcon = ContextCompat.getDrawable(getContext(), R.mipmap.clear);
         } else {
             TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.ClearEditText, defStyle, 0);
             mClearIconWidth = typedArray.getDimensionPixelSize(
@@ -95,6 +99,10 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
                     R.styleable.ClearEditText_clearIconHeight,
                     getResources().getDimensionPixelSize(R.dimen.clear_edit_text_clear_icon_height)
             );
+            mClearIcon = typedArray.getDrawable(R.styleable.ClearEditText_clearIcon);
+            if (mClearIcon == null) {
+                mClearIcon = ContextCompat.getDrawable(getContext(), R.mipmap.clear);
+            }
             typedArray.recycle();
         }
         setFocusable(true);
@@ -103,8 +111,8 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
     private void showClearIcon(boolean isShowIcon) {
         Drawable[] compoundDrawables = getCompoundDrawables();
         if (isShowIcon) {
-            mClearDrawable.setBounds(0, 0, mClearIconWidth, mClearIconHeight);
-            setCompoundDrawables(compoundDrawables[0], compoundDrawables[1], mClearDrawable, compoundDrawables[3]);
+            mClearIcon.setBounds(0, 0, mClearIconWidth, mClearIconHeight);
+            setCompoundDrawables(compoundDrawables[0], compoundDrawables[1], mClearIcon, compoundDrawables[3]);
         } else {
             setCompoundDrawables(compoundDrawables[0], compoundDrawables[1], null, compoundDrawables[3]);
         }
