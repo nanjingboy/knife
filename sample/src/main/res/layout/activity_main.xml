@@ -15,4 +15,10 @@
         android:layout_height="40dp"
         android:textAllCaps="false"
         android:text="SearchEditText Demo"/>
+    <Button
+        android:id="@+id/titleAndValueTextViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="TitleAndValueTextView Demo"/>
 </LinearLayout>

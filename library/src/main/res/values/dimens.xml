@@ -5,4 +5,6 @@
     <dimen name="clear_edit_text_clear_icon_height">16dp</dimen>
     <dimen name="search_edit_text_icon_width">14dp</dimen>
     <dimen name="search_edit_text_icon_height">14dp</dimen>
+
+    <dimen name="title_and_value_text_view_font_size">14sp</dimen>
 </resources>

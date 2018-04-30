@@ -10,4 +10,14 @@
         <attr name="searchIconWidth" format="dimension|reference"/>
         <attr name="searchIconHeight" format="dimension|reference"/>
     </declare-styleable>
+    <declare-styleable name="TitleAndValueTextView">
+        <attr name="titleText" format="string|reference"/>
+        <attr name="valueText" format="string|reference"/>
+        <attr name="titleWidth" format="dimension|reference"/>
+        <attr name="titleFontSize" format="dimension|reference"/>
+        <attr name="titleFontColor" format="color|reference"/>
+        <attr name="valueFontSize" format="dimension|reference"/>
+        <attr name="valueFontColor" format="color|reference"/>
+        <attr name="valueAlignRight" format="boolean"/>
+    </declare-styleable>
 </resources>

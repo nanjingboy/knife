@@ -16,5 +16,6 @@
         </activity>
         <activity android:name=".ClearEditTextDemoActivity" />
         <activity android:name=".SearchEditTextDemoActivity"/>
+        <activity android:name=".TitleAndValueTextViewDemoActivity"/>
     </application>
 </manifest>
