@@ -6,10 +6,10 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class TitleAndValueTextView extends LinearLayout {
+public class TitleAndValueTextView extends RelativeLayout {
 
     private TextView mTitleTextView;
     private TextView mValueTextView;
@@ -34,7 +34,7 @@ public class TitleAndValueTextView extends LinearLayout {
     }
 
     public void setTitleWidth(int width) {
-        LayoutParams layoutParams = (LinearLayout.LayoutParams) mTitleTextView.getLayoutParams();
+        LayoutParams layoutParams = (LayoutParams) mTitleTextView.getLayoutParams();
         layoutParams.width = width;
         mTitleTextView.setLayoutParams(layoutParams);
     }
@@ -77,7 +77,6 @@ public class TitleAndValueTextView extends LinearLayout {
 
     protected void init(AttributeSet attrs, int defStyle) {
         Context context = getContext();
-        setOrientation(HORIZONTAL);
 
         int defaultFontColor = Color.BLACK;
         int defaultFontSize = getResources().getDimensionPixelSize(R.dimen.title_and_value_text_view_font_size);
@@ -107,11 +106,14 @@ public class TitleAndValueTextView extends LinearLayout {
         }
 
         mTitleTextView = new TextView(context);
+        mTitleTextView.setId(R.id.title_text_view);
         mTitleTextView.setText(titleText);
         mTitleTextView.setTextColor(titleFontColor);
         mTitleTextView.setGravity(Gravity.CENTER_VERTICAL);
         mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, titleFontSize);
-        mTitleTextView.setLayoutParams(new LayoutParams(titleWidth, LayoutParams.MATCH_PARENT));
+        LayoutParams titleTextViewLayoutParams = new LayoutParams(titleWidth, LayoutParams.MATCH_PARENT);
+        titleTextViewLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+        mTitleTextView.setLayoutParams(titleTextViewLayoutParams);
         addView(mTitleTextView);
 
         mValueTextView = new TextView(context);
@@ -123,7 +125,13 @@ public class TitleAndValueTextView extends LinearLayout {
         } else {
             mValueTextView.setGravity(Gravity.CENTER_VERTICAL);
         }
-        mValueTextView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        setValueTextLayoutParams();
         addView(mValueTextView);
+    }
+
+    protected void setValueTextLayoutParams() {
+        LayoutParams valueTextViewLayoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        valueTextViewLayoutParams.addRule(RIGHT_OF, R.id.title_text_view);
+        mValueTextView.setLayoutParams(valueTextViewLayoutParams);
     }
 }
