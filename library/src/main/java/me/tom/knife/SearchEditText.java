@@ -24,17 +24,14 @@ public class SearchEditText extends ClearEditText {
 
     public SearchEditText(Context context) {
         super(context);
-        init(null, 0);
     }
 
     public SearchEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(attrs, 0);
     }
 
     public SearchEditText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init(attrs, defStyle);
     }
 
     public void setSearchIcon(Drawable drawable) {
