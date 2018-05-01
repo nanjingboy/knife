@@ -31,5 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, TitleAndValueTextViewDemoActivity.class));
             }
         });
+        findViewById(R.id.rightIconTitleAndValueTextViewDemo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RightIconTitleAndValueTextViewActivity.class));
+            }
+        });
     }
 }

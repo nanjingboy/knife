@@ -21,4 +21,10 @@
         android:layout_height="40dp"
         android:textAllCaps="false"
         android:text="TitleAndValueTextView Demo"/>
+    <Button
+        android:id="@+id/rightIconTitleAndValueTextViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="RightIconTitleAndValueTextView Demo"/>
 </LinearLayout>

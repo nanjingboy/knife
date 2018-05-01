@@ -20,4 +20,10 @@
         <attr name="valueFontColor" format="color|reference"/>
         <attr name="valueAlignRight" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="RightIconTitleAndValueTextView">
+        <attr name="rightIcon" format="reference"/>
+        <attr name="rightIconWidth" format="dimension|reference"/>
+        <attr name="rightIconHeight" format="dimension|reference"/>
+        <attr name="rightIconMarginLeft" format="dimension|reference"/>
+    </declare-styleable>
 </resources>

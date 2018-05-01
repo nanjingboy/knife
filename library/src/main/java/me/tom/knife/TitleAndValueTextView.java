@@ -69,9 +69,9 @@ public class TitleAndValueTextView extends RelativeLayout {
 
     public void setValueAlignRight(boolean alignRight) {
         if (alignRight) {
-            mValueTextView.setGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT);
+            mValueTextView.setGravity(Gravity.RIGHT);
         } else {
-            mValueTextView.setGravity(Gravity.CENTER_VERTICAL);
+            mValueTextView.setGravity(Gravity.LEFT);
         }
     }
 
@@ -109,9 +109,10 @@ public class TitleAndValueTextView extends RelativeLayout {
         mTitleTextView.setId(R.id.title_text_view);
         mTitleTextView.setText(titleText);
         mTitleTextView.setTextColor(titleFontColor);
-        mTitleTextView.setGravity(Gravity.CENTER_VERTICAL);
         mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, titleFontSize);
-        LayoutParams titleTextViewLayoutParams = new LayoutParams(titleWidth, LayoutParams.MATCH_PARENT);
+        mTitleTextView.setIncludeFontPadding(false);
+        LayoutParams titleTextViewLayoutParams = new LayoutParams(titleWidth, LayoutParams.WRAP_CONTENT);
+        titleTextViewLayoutParams.addRule(CENTER_VERTICAL, RelativeLayout.TRUE);
         titleTextViewLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
         mTitleTextView.setLayoutParams(titleTextViewLayoutParams);
         addView(mTitleTextView);
@@ -120,18 +121,20 @@ public class TitleAndValueTextView extends RelativeLayout {
         mValueTextView.setText(valueText);
         mValueTextView.setTextColor(valueFontColor);
         mValueTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, valueFontSize);
+        mValueTextView.setIncludeFontPadding(false);
         if (valueAlignRight) {
-            mValueTextView.setGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT);
+            mValueTextView.setGravity(Gravity.RIGHT);
         } else {
-            mValueTextView.setGravity(Gravity.CENTER_VERTICAL);
+            mValueTextView.setGravity(Gravity.LEFT);
         }
-        setValueTextLayoutParams();
+        mValueTextView.setLayoutParams(getValueTextLayoutParams());
         addView(mValueTextView);
     }
 
-    protected void setValueTextLayoutParams() {
-        LayoutParams valueTextViewLayoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        valueTextViewLayoutParams.addRule(RIGHT_OF, R.id.title_text_view);
-        mValueTextView.setLayoutParams(valueTextViewLayoutParams);
+    protected LayoutParams getValueTextLayoutParams() {
+        LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        layoutParams.addRule(CENTER_VERTICAL, RelativeLayout.TRUE);
+        layoutParams.addRule(RIGHT_OF, R.id.title_text_view);
+        return layoutParams;
     }
 }
