@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBg"
@@ -7,5 +8,8 @@
     <me.tom.knife.ClearEditText
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:hint="Please type..."/>
+        android:hint="Please type..."
+        app:clearIcon="@mipmap/clear"
+        app:clearIconWidth="@dimen/clear_edit_text_clear_icon_width"
+        app:clearIconHeight="@dimen/clear_edit_text_clear_icon_height"/>
 </LinearLayout>
