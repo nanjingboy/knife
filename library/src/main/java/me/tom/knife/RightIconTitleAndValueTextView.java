@@ -50,8 +50,6 @@ public class RightIconTitleAndValueTextView extends TitleAndValueTextView {
         int defaultWith = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_width);
         int defaultHeight = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_height);
         int defaultMarginLeft = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_margin_left);
-
-
         if (attrs == null) {
             rightIcon = defaultIcon;
             rightIconWidth = defaultWith;
