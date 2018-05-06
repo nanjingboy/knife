@@ -43,18 +43,18 @@ public class RightIconTitleAndValueTextView extends TitleAndValueTextView {
         Drawable rightIcon;
         int rightIconWidth;
         int rightIconHeight;
-        int rightIconMarginLeft;
+        int rightIconLeftMargin;
         Context context = getContext();
         Resources resources = getResources();
         Drawable defaultIcon = ContextCompat.getDrawable(context, R.mipmap.arrow_right);
         int defaultWith = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_width);
         int defaultHeight = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_height);
-        int defaultMarginLeft = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_margin_left);
+        int defaultLeftMargin = resources.getDimensionPixelSize(R.dimen.title_and_value_text_view_right_icon_left_margin);
         if (attrs == null) {
             rightIcon = defaultIcon;
             rightIconWidth = defaultWith;
             rightIconHeight = defaultHeight;
-            rightIconMarginLeft = defaultMarginLeft;
+            rightIconLeftMargin = defaultLeftMargin;
         } else {
             TypedArray typedArray = context.obtainStyledAttributes(
                     attrs,
@@ -74,9 +74,9 @@ public class RightIconTitleAndValueTextView extends TitleAndValueTextView {
                     R.styleable.RightIconTitleAndValueTextView_rightIconHeight,
                     defaultHeight
             );
-            rightIconMarginLeft = typedArray.getDimensionPixelSize(
-                    R.styleable.RightIconTitleAndValueTextView_rightIconMarginLeft,
-                    defaultMarginLeft
+            rightIconLeftMargin = typedArray.getDimensionPixelSize(
+                    R.styleable.RightIconTitleAndValueTextView_rightIconLeftMargin,
+                    defaultLeftMargin
             );
             typedArray.recycle();
         }
@@ -84,7 +84,7 @@ public class RightIconTitleAndValueTextView extends TitleAndValueTextView {
         mImageView.setImageDrawable(rightIcon);
         mImageView.setId(R.id.right_icon_view);
         LayoutParams layoutParams = new LayoutParams(rightIconWidth, rightIconHeight);
-        layoutParams.leftMargin = rightIconMarginLeft;
+        layoutParams.leftMargin = rightIconLeftMargin;
         layoutParams.addRule(CENTER_VERTICAL, RelativeLayout.TRUE);
         layoutParams.addRule(ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
         mImageView.setLayoutParams(layoutParams);

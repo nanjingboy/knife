@@ -11,6 +11,9 @@
         <attr name="searchIconHeight" format="dimension|reference"/>
     </declare-styleable>
     <declare-styleable name="TitleAndValueTextView">
+        <attr name="isRequired" format="boolean"/>
+        <attr name="requiredTextFontSize" format="dimension|reference"/>
+        <attr name="requiredTextRightMargin" format="dimension|reference"/>
         <attr name="titleText" format="string|reference"/>
         <attr name="valueText" format="string|reference"/>
         <attr name="titleWidth" format="dimension|reference"/>
@@ -24,6 +27,6 @@
         <attr name="rightIcon" format="reference"/>
         <attr name="rightIconWidth" format="dimension|reference"/>
         <attr name="rightIconHeight" format="dimension|reference"/>
-        <attr name="rightIconMarginLeft" format="dimension|reference"/>
+        <attr name="rightIconLeftMargin" format="dimension|reference"/>
     </declare-styleable>
 </resources>

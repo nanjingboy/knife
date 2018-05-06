@@ -2,4 +2,5 @@
 <resources>
     <item name="title_text_view" type="id"/>
     <item name="right_icon_view" type="id"/>
+    <item name="required_text_view" type="id"/>
 </resources>

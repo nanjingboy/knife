@@ -10,6 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:padding="10dp"
+        app:isRequired="true"
+        app:requiredTextFontSize="@dimen/title_and_value_text_view_required_text_font_size"
+        app:requiredTextRightMargin="@dimen/title_and_value_text_view_required_text_right_margin"
         app:titleText="Name"
         app:valueText="Tom.Huang"
         app:valueAlignRight="true"
@@ -20,5 +23,5 @@
         app:rightIcon="@mipmap/arrow_right"
         app:rightIconWidth="@dimen/title_and_value_text_view_right_icon_width"
         app:rightIconHeight="@dimen/title_and_value_text_view_right_icon_height"
-        app:rightIconMarginLeft="@dimen/title_and_value_text_view_right_icon_margin_left"/>
+        app:rightIconLeftMargin="@dimen/title_and_value_text_view_right_icon_left_margin"/>
 </LinearLayout>
