@@ -18,5 +18,6 @@
         <activity android:name=".SearchEditTextDemoActivity"/>
         <activity android:name=".TitleAndValueTextViewDemoActivity"/>
         <activity android:name=".RightIconTitleAndValueTextViewActivity"/>
+        <activity android:name=".TitleEditTextDemoActivity"/>
     </application>
 </manifest>

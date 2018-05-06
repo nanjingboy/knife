@@ -30,4 +30,10 @@
         <attr name="rightIconHeight" format="dimension|reference"/>
         <attr name="rightIconLeftMargin" format="dimension|reference"/>
     </declare-styleable>
+    <declare-styleable name="TitleEditText">
+        <attr name="editTextValue" format="string|reference"/>
+        <attr name="editTextHint" format="string|reference"/>
+        <attr name="editTextFontSize" format="dimension|reference"/>
+        <attr name="editTextFontColor" format="color|reference"/>
+    </declare-styleable>
 </resources>

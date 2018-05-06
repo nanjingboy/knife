@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import me.tom.knife.TitleEditText;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,11 +20,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ClearEditTextDemoActivity.class));
             }
         });
-
         findViewById(R.id.searchEditTextDemo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SearchEditTextDemoActivity.class));
+            }
+        });
+        findViewById(R.id.titleEditTextDemo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TitleEditTextDemoActivity.class));
             }
         });
         findViewById(R.id.titleAndValueTextViewDemo).setOnClickListener(new View.OnClickListener() {

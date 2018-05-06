@@ -56,7 +56,7 @@ public class TitleAndValueTextView extends TitleLayout {
         mValueTextView.setTextColor(valueFontColor);
         mValueTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, valueFontSize);
         mValueTextView.setIncludeFontPadding(false);
-        mValueTextView.setGravity(Gravity.RIGHT);
+        mValueTextView.setGravity(Gravity.END);
         mValueTextView.setLayoutParams(getValueTextLayoutParams());
         addView(mValueTextView);
     }
