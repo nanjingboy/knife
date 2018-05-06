@@ -10,15 +10,17 @@
         <attr name="searchIconWidth" format="dimension|reference"/>
         <attr name="searchIconHeight" format="dimension|reference"/>
     </declare-styleable>
-    <declare-styleable name="TitleAndValueTextView">
+    <declare-styleable name="TitleLayout">
         <attr name="isRequired" format="boolean"/>
         <attr name="requiredTextFontSize" format="dimension|reference"/>
         <attr name="requiredTextRightMargin" format="dimension|reference"/>
         <attr name="titleText" format="string|reference"/>
-        <attr name="valueText" format="string|reference"/>
         <attr name="titleWidth" format="dimension|reference"/>
         <attr name="titleFontSize" format="dimension|reference"/>
         <attr name="titleFontColor" format="color|reference"/>
+    </declare-styleable>
+    <declare-styleable name="TitleAndValueTextView">
+        <attr name="valueText" format="string|reference"/>
         <attr name="valueFontSize" format="dimension|reference"/>
         <attr name="valueFontColor" format="color|reference"/>
     </declare-styleable>
