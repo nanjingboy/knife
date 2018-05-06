@@ -60,10 +60,10 @@ public class ClearEditText extends AppCompatEditText implements TextWatcher {
     public boolean onTouchEvent(MotionEvent event) {
         if (getCompoundDrawables()[2] != null) {
             if (event.getAction() == MotionEvent.ACTION_UP) {
-                boolean xTouchable = event.getX() > (getWidth() - getPaddingRight() - mClearIcon.getIntrinsicWidth())
+                boolean xTouchable = event.getX() > (getWidth() - getPaddingRight() - mClearIconWidth)
                         && (event.getX() < (getWidth() - getPaddingRight()));
-                boolean yTouchable = event.getY() > (getHeight() - mClearIcon.getIntrinsicHeight()) / 2
-                        && event.getY() < (getHeight() + mClearIcon.getIntrinsicHeight()) / 2;
+                boolean yTouchable = event.getY() > (getHeight() - mClearIconHeight) / 2
+                        && event.getY() < (getHeight() + mClearIconHeight) / 2;
                 if (xTouchable && yTouchable) {
                     setText("");
                 }
