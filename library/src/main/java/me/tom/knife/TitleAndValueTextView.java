@@ -36,19 +36,14 @@ public class TitleAndValueTextView extends TitleLayout {
     @Override
     protected void init(AttributeSet attrs, int defStyle) {
         super.init(attrs, defStyle);
-
-
         Context context = getContext();
         Resources resources = getResources();
-
         int defaultFontColor = Color.BLACK;
         int defaultFontSize = resources.getDimensionPixelSize(R.dimen.title_layout_required_text_font_size);
-
 
         String valueText = null;
         int valueFontSize = defaultFontSize;
         int valueFontColor = defaultFontColor;
-
         if (attrs != null) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TitleAndValueTextView, defStyle, 0);
             valueText = typedArray.getString(R.styleable.TitleAndValueTextView_valueText);

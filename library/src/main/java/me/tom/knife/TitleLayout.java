@@ -50,7 +50,6 @@ public class TitleLayout extends RelativeLayout {
         int defaultRequiredTextFontSize = resources.getDimensionPixelSize(R.dimen.title_layout_required_text_font_size);
         int defaultRequiredTextRightMargin = resources.getDimensionPixelSize(R.dimen.title_layout_required_text_right_margin);
 
-
         boolean isRequired = false;
         int requiredTextFontSize = defaultRequiredTextFontSize;
         int requiredTextRightMargin = defaultRequiredTextRightMargin;
