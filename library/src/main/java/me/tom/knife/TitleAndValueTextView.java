@@ -32,57 +32,19 @@ public class TitleAndValueTextView extends RelativeLayout {
         init(attrs, defStyle);
     }
 
+    public TextView getTitleTextView() {
+        return mTitleTextView;
+    }
+
+    public TextView getValueTextView() {
+        return mValueTextView;
+    }
+
     public void setIsRequired(boolean isRequired) {
         if (isRequired) {
             mRequiredTextView.setVisibility(VISIBLE);
         } else {
             mRequiredTextView.setVisibility(GONE);
-        }
-    }
-
-    public void setTitleText(String text) {
-        mTitleTextView.setText(text);
-    }
-
-    public void setTitleWidth(int width) {
-        LayoutParams layoutParams = (LayoutParams) mTitleTextView.getLayoutParams();
-        layoutParams.width = width;
-        mTitleTextView.setLayoutParams(layoutParams);
-    }
-
-    public void setTitleFontSize(int unit, float size) {
-        mTitleTextView.setTextSize(unit, size);
-    }
-
-    public void setTitleFontSize(float size) {
-        mTitleTextView.setTextSize(size);
-    }
-
-    public void setTitleFontColor(int color) {
-        mTitleTextView.setTextColor(color);
-    }
-
-    public void setValueText(String text) {
-        mValueTextView.setText(text);
-    }
-
-    public void setValueFontSize(int unit, float size) {
-        mValueTextView.setTextSize(unit, size);
-    }
-
-    public void setValueFontSize(float size) {
-        mValueTextView.setTextSize(size);
-    }
-
-    public void setValueFontColor(int color) {
-        mValueTextView.setTextColor(color);
-    }
-
-    public void setValueAlignRight(boolean alignRight) {
-        if (alignRight) {
-            mValueTextView.setGravity(Gravity.RIGHT);
-        } else {
-            mValueTextView.setGravity(Gravity.LEFT);
         }
     }
 
@@ -106,7 +68,6 @@ public class TitleAndValueTextView extends RelativeLayout {
         int titleWidth = LayoutParams.WRAP_CONTENT;
 
         String valueText = null;
-        boolean valueAlignRight = true;
         int valueFontSize = defaultFontSize;
         int valueFontColor = defaultFontColor;
 
@@ -130,7 +91,6 @@ public class TitleAndValueTextView extends RelativeLayout {
             valueText = typedArray.getString(R.styleable.TitleAndValueTextView_valueText);
             valueFontSize = typedArray.getDimensionPixelSize(R.styleable.TitleAndValueTextView_valueFontSize, defaultFontSize);
             valueFontColor = typedArray.getColor(R.styleable.TitleAndValueTextView_valueFontColor, defaultFontColor);
-            valueAlignRight = typedArray.getBoolean(R.styleable.TitleAndValueTextView_valueAlignRight, true);
             typedArray.recycle();
         }
 
@@ -163,11 +123,7 @@ public class TitleAndValueTextView extends RelativeLayout {
         mValueTextView.setTextColor(valueFontColor);
         mValueTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, valueFontSize);
         mValueTextView.setIncludeFontPadding(false);
-        if (valueAlignRight) {
-            mValueTextView.setGravity(Gravity.RIGHT);
-        } else {
-            mValueTextView.setGravity(Gravity.LEFT);
-        }
+        mValueTextView.setGravity(Gravity.RIGHT);
         mValueTextView.setLayoutParams(getValueTextLayoutParams());
         addView(mValueTextView);
 

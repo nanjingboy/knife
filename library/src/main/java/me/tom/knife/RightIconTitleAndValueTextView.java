@@ -25,16 +25,8 @@ public class RightIconTitleAndValueTextView extends TitleAndValueTextView {
         super(context, attrs, defStyle);
     }
 
-
-    public void setRightIcon(Drawable icon) {
-        mImageView.setImageDrawable(icon);
-    }
-
-    public void setRightIconSize(int width, int height) {
-        LayoutParams layoutParams = (LayoutParams) mImageView.getLayoutParams();
-        layoutParams.width = width;
-        layoutParams.height = height;
-        mImageView.setLayoutParams(layoutParams);
+    public ImageView getImageView() {
+        return mImageView;
     }
 
     @Override

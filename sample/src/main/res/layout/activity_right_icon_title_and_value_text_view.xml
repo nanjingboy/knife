@@ -15,7 +15,6 @@
         app:requiredTextRightMargin="@dimen/title_and_value_text_view_required_text_right_margin"
         app:titleText="Name"
         app:valueText="Tom.Huang"
-        app:valueAlignRight="true"
         app:titleFontColor="@android:color/black"
         app:valueFontColor="@android:color/black"
         app:titleFontSize="@dimen/title_and_value_text_view_font_size"

@@ -21,7 +21,6 @@
         <attr name="titleFontColor" format="color|reference"/>
         <attr name="valueFontSize" format="dimension|reference"/>
         <attr name="valueFontColor" format="color|reference"/>
-        <attr name="valueAlignRight" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="RightIconTitleAndValueTextView">
         <attr name="rightIcon" format="reference"/>
