@@ -13,4 +13,11 @@
     <dimen name="title_and_value_text_view_right_icon_width">6dp</dimen>
     <dimen name="title_and_value_text_view_right_icon_height">12dp</dimen>
     <dimen name="title_and_value_text_view_right_icon_left_margin">4dp</dimen>
+
+    <dimen name="single_select_list_item_height">44dp</dimen>
+    <dimen name="single_select_list_item_left_padding">16dp</dimen>
+    <dimen name="single_select_list_item_right_padding">16dp</dimen>
+    <dimen name="single_select_list_item_font_size">14sp</dimen>
+    <dimen name="single_select_list_item_selected_image_width">22dp</dimen>
+    <dimen name="single_select_list_item_selected_image_height">14dp</dimen>
 </resources>

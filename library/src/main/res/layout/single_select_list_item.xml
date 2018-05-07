@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_select_list_item_height"
+        android:paddingLeft="@dimen/single_select_list_item_left_padding"
+        android:paddingRight="@dimen/single_select_list_item_right_padding">
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/selectedImageView"
+            android:textColor="@color/colorSingleSelectFont"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/single_select_list_item_font_size"/>
+        <ImageView
+            android:id="@+id/selectedImageView"
+            android:layout_width="@dimen/single_select_list_item_selected_image_width"
+            android:layout_height="@dimen/single_select_list_item_selected_image_height"
+            android:src="@mipmap/selected"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

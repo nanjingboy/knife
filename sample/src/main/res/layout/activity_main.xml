@@ -33,4 +33,10 @@
         android:layout_height="40dp"
         android:textAllCaps="false"
         android:text="RightIconTitleAndValueTextView Demo"/>
+    <Button
+        android:id="@+id/singleSelectListActivityDemo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="AbstractSingleSelectListActivity Demo"/>
 </LinearLayout>
