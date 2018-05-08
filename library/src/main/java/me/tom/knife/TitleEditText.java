@@ -62,7 +62,7 @@ public class TitleEditText extends TitleLayout {
         layoutParams.addRule(CENTER_VERTICAL, RelativeLayout.TRUE);
         layoutParams.addRule(RIGHT_OF, R.id.title_text_view);
         mEditText.setLayoutParams(layoutParams);
-        mEditText.setBackgroundColor(Color.WHITE);
+        mEditText.setBackgroundResource(android.R.color.transparent);
         addView(mEditText);
     }
 }
