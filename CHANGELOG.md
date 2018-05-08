@@ -1,4 +1,8 @@
-## 1.0.1 2018-05-08
+## 1.0.5 2018-05-08
+
+* Change editText default background for TitleEditText
+
+## 1.0.3 2018-05-08
 
 * Add AbstractSingleSelectListActivity
 
