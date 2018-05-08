@@ -23,6 +23,7 @@ abstract public class AbstractSingleSelectListActivity extends AppCompatActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView();
         mNoneValue = getNoneValue();
         mAdapter = new SingleSelectListAdapter(this);
         String key = getIntent().getStringExtra("key");
@@ -31,7 +32,7 @@ abstract public class AbstractSingleSelectListActivity extends AppCompatActivity
         } else {
             mAdapter.setSelectedKey(key);
         }
-        mListView = setContentView();
+        mListView = findViewById(getListViewId());
         mListView.setAdapter(mAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -43,11 +44,9 @@ abstract public class AbstractSingleSelectListActivity extends AppCompatActivity
         });
     }
 
-    abstract protected ListView setContentView();
-
-    protected KVMap getNoneValue() {
-        return null;
-    }
+    abstract protected KVMap getNoneValue();
+    abstract protected int getListViewId();
+    abstract protected void setContentView();
 
     protected void onListItemClick(KVMap data) {
         String key = data.key;

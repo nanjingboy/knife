@@ -2,7 +2,6 @@ package me.tom.knife.sample;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +25,17 @@ public class UserSingleSelectListActivity extends AbstractSingleSelectListActivi
     }
 
     @Override
-    protected ListView setContentView() {
+    protected KVMap getNoneValue() {
+        return null;
+    }
+
+    @Override
+    protected int getListViewId() {
+        return R.id.listView;
+    }
+
+    @Override
+    protected void setContentView() {
         setContentView(R.layout.activity_user_single_select);
-        return findViewById(R.id.listView);
     }
 }
