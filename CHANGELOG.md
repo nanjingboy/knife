@@ -1,3 +1,7 @@
+## 1.0.7 2018-05-10
+
+* Add TitleSwitch
+
 ## 1.0.5 2018-05-08
 
 * Change editText default background for TitleEditText
