@@ -20,5 +20,6 @@
         <activity android:name=".RightIconTitleAndValueTextViewActivity"/>
         <activity android:name=".TitleEditTextDemoActivity"/>
         <activity android:name=".UserSingleSelectListActivity"/>
+        <activity android:name=".TitleSwitchDemoActivity"/>
     </application>
 </manifest>

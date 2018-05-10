@@ -8,8 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import me.tom.knife.TitleEditText;
-
 public class MainActivity extends AppCompatActivity {
 
     static final int REQUEST_USER_SELECT = 32;
@@ -39,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, TitleEditTextDemoActivity.class));
             }
         });
+        findViewById(R.id.titleSwitchDemo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TitleSwitchDemoActivity.class));
+            }
+        });
         findViewById(R.id.titleAndValueTextViewDemo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, RightIconTitleAndValueTextViewActivity.class));
             }
         });
-
         findViewById(R.id.singleSelectListActivityDemo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

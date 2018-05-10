@@ -22,6 +22,12 @@
         android:textAllCaps="false"
         android:text="TitleEditText Demo"/>
     <Button
+        android:id="@+id/titleSwitchDemo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="TitleSwitch Demo"/>
+    <Button
         android:id="@+id/titleAndValueTextViewDemo"
         android:layout_width="match_parent"
         android:layout_height="40dp"

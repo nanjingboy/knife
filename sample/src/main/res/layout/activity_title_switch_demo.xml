@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:padding="20dp">
+    <me.tom.knife.TitleSwitch
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:isRequired="true"
+        app:requiredTextFontSize="@dimen/title_layout_required_text_font_size"
+        app:requiredTextRightMargin="@dimen/title_layout_required_text_right_margin"
+        app:titleText="Switch"
+        app:titleFontColor="@android:color/black"
+        app:titleFontSize="@dimen/title_layout_text_view_font_size"
+        app:isSwitchChecked="true"/>
+</LinearLayout>

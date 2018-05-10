@@ -36,4 +36,7 @@
         <attr name="editTextFontSize" format="dimension|reference"/>
         <attr name="editTextFontColor" format="color|reference"/>
     </declare-styleable>
+    <declare-styleable name="TitleSwitch">
+        <attr name="isSwitchChecked" format="boolean"/>
+    </declare-styleable>
 </resources>
