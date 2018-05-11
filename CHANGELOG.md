@@ -1,3 +1,7 @@
+## 1.0.9 2018-05-11
+
+* Add SingleSelectDialog
+
 ## 1.0.7 2018-05-10
 
 * Add TitleSwitch
