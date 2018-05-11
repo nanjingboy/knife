@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import me.tom.knife.SingleSelectDialog;
+import me.tom.knife.model.KVMap;
+
 public class MainActivity extends AppCompatActivity {
 
     static final int REQUEST_USER_SELECT = 32;
@@ -55,6 +58,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, RightIconTitleAndValueTextViewActivity.class));
             }
         });
+        findViewById(R.id.singleSelectDialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SingleSelectDialog dialog = new SingleSelectDialog(MainActivity.this, new String[] { "From Local", "From Network"});
+                dialog.show(null, new SingleSelectDialog.IItemClickListener() {
+                    @Override
+                    public void onItemClick(KVMap map) {
+                        Toast.makeText(MainActivity.this, "Selected Value:" + map.value, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
         findViewById(R.id.singleSelectListActivityDemo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

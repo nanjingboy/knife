@@ -2,4 +2,5 @@
 <resources>
     <color name="colorPrimary">#456CC1</color>
     <color name="colorSingleSelectFont">#333333</color>
+    <color name="colorSingleSelectDivider">#F4F4F4</color>
 </resources>
