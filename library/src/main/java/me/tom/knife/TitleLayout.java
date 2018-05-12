@@ -33,6 +33,12 @@ public class TitleLayout extends RelativeLayout {
         return mTitleTextView;
     }
 
+    public void setTitleTextViewWidth(int width) {
+        LayoutParams layoutParams = (LayoutParams) mTitleTextView.getLayoutParams();
+        layoutParams.width = width;
+        mTitleTextView.setLayoutParams(layoutParams);
+    }
+
     public void setIsRequired(boolean isRequired) {
         if (isRequired) {
             mRequiredTextView.setVisibility(VISIBLE);
