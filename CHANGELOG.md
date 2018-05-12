@@ -1,3 +1,7 @@
+## 1.1.0 2018-05-12
+
+* Set titleTextView width through code for TitleLayout view
+
 ## 1.0.9 2018-05-11
 
 * Add SingleSelectDialog

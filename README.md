@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.nanjingboy:knife:1.0.9'
+    implementation 'com.github.nanjingboy:knife:1.1.0'
 }
 ```
 
